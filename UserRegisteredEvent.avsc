@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "UserRegisteredEvent",
+  "namespace": "com.example.events",
+  "doc": "Schema representing a user registration event.",
+  "fields": [
+    {
+      "name": "username",
+      "type": "string",
+      "doc": "The unique username of the newly registered user."
+    },
+    {
+      "name": "isPremiumUser",
+      "type": "boolean",
+      "doc": "Indicates whether the user has a premium subscription."
+    }
+  ]
+}
