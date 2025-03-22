@@ -213,6 +213,7 @@ remove it from our Order model.
     {
       "name": "orderAmount",
       "type": "double",
+      "default": 0.0,
       "doc": "DEPRECATED: This field is no longer relevant for this data model."
     },
     {
