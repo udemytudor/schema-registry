@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "UserActivityEvent",
+  "namespace": "com.streaming.platform",
+  "fields": [
+    {
+      "name": "userId",
+      "type": "int",
+      "doc": "The unique identifier for the user."
+    },
+    {
+      "name": "activity",
+      "type": "string",
+      "doc": "The type of activity the user performed, e.g., 'logged in', 'payment registered', etc"
+    }
+  ]
+}

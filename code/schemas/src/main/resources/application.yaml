@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: schemas
+  kafka:
+    properties:
+      schema.registry.url: http://localhost:8081
+    producer:
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
