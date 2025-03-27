@@ -17,6 +17,6 @@ public class SchemasApplication {
 	@Bean
 	public ApplicationRunner runner(KafkaTemplate<String, UserActivityEvent> template) {
 		var event = UserActivityEvent.newBuilder().setUserId(123).setActivity("logged in").build();
-		return args -> template.send("demo", event);
+		return args -> template.send("activity-topic", event);
 	}
 }
