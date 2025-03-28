@@ -14,9 +14,9 @@ public class SchemasApplication {
 		SpringApplication.run(SchemasApplication.class, args);
 	}
 
-	@Bean
-	public ApplicationRunner runner(KafkaTemplate<String, UserActivityEvent> template) {
-		var event = UserActivityEvent.newBuilder().setUserId(123).setActivity("logged in").build();
-		return args -> template.send("activity-topic", event);
-	}
+//	@Bean
+//	public ApplicationRunner runner(KafkaTemplate<String, UserActivityEvent> template) {
+//		var event = UserActivityEvent.newBuilder().setUserId(123).setActivity("logged in").build();
+//		return args -> template.send("activity-topic", event);
+//	}
 }

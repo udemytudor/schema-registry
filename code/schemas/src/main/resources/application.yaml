@@ -7,6 +7,8 @@ spring:
     producer:
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
     consumer:
-      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
       properties:
         specific.avro.reader: true
+        spring.deserializer.value.delegate.class: "io.confluent.kafka.serializers.KafkaAvroDeserializer"
+        spring.deserializer.value.function: "com.example.schemas.kafka.Consumer.FailedDeserializationFunction"
